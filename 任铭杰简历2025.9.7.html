@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任铭杰 - 个人简历</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36BFFA',
+                        dark: '#1D2939',
+                        light: '#F9FAFB',
+                        accent: '#7C3AED'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .progress-bar {
+                height: 6px;
+                background: linear-gradient(90deg, #165DFF var(--progress), #E5E7EB var(--progress));
+                border-radius: 3px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- 顶部导航 -->
+    <nav class="sticky top-0 bg-white shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-primary">任铭杰 <span class="text-sm font-normal text-gray-500">个人简历</span></h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#basic" class="text-gray-600 hover:text-primary transition-colors">基础信息</a>
+                <a href="#education" class="text-gray-600 hover:text-primary transition-colors">教育背景</a>
+                <a href="#experience" class="text-gray-600 hover:text-primary transition-colors">工作经历</a>
+                <a href="#skills" class="text-gray-600 hover:text-primary transition-colors">技能特长</a>
+                <a href="#advantages" class="text-gray-600 hover:text-primary transition-colors">个人优势</a>
+                <a href="#salary" class="text-gray-600 hover:text-primary transition-colors">期待薪资</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none" id="menuToggle">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white w-full border-t" id="mobileMenu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#basic" class="text-gray-600 hover:text-primary py-2 transition-colors">基础信息</a>
+                <a href="#education" class="text-gray-600 hover:text-primary py-2 transition-colors">教育背景</a>
+                <a href="#experience" class="text-gray-600 hover:text-primary py-2 transition-colors">工作经历</a>
+                <a href="#skills" class="text-gray-600 hover:text-primary py-2 transition-colors">技能特长</a>
+                <a href="#advantages" class="text-gray-600 hover:text-primary py-2 transition-colors">个人优势</a>
+                <a href="#salary" class="text-gray-600 hover:text-primary py-2 transition-colors">期待薪资</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow animate-fade-in">任铭杰</h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto opacity-90">机械制造与销售领域专业人才，专注润滑油、液压系统销售与技术支持</p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="tel:18029601807" class="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center">
+                    <i class="fa fa-phone mr-2"></i> 联系电话
+                </a>
+                <a href="mailto:1845770674@qq.com" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors flex items-center">
+                    <i class="fa fa-envelope mr-2"></i> 发送邮件
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- 基础信息 -->
+        <section id="basic" class="mb-16 scroll-mt-20">
+            <div class="flex items-center mb-8">
+                <div class="w-10 h-1 bg-primary rounded-full mr-4"></div>
+                <h2 class="text-3xl font-bold text-dark">基础信息</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                            <i class="fa fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-700">姓名</h3>
+                            <p class="text-gray-600">任铭杰</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                            <i class="fa fa-calendar text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-700">年龄 / 出生日期</h3>
+                            <p class="text-gray-600">24岁 / 2000年10月12日</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                            <i class="fa fa-phone text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-700">联系电话</h3>
+                            <p class="text-gray-600">18029601807</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                            <i class="fa fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-700">电子邮箱</h3>
+                            <p class="text-gray-600">1845770674@qq.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 教育背景 -->
+        <section id="education" class="mb-16 scroll-mt-20">
+            <div class="flex items-center mb-8">
+                <div class="w-10 h-1 bg-primary rounded-full mr-4"></div>
+                <h2 class="text-3xl font-bold text-dark">教育背景</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 card-hover">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <div class="bg-primary/10 rounded-lg p-4 text-center">
+                            <i class="fa fa-graduation-cap text-4xl text-primary mb-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-800">学历</h3>
+                            <p class="text-primary font-medium">大专</p>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4 md:pl-8 md:border-l border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">专业</h3>
+                        <p class="text-gray-600 mb-4">数控和机械制造</p>
+                        <p class="text-gray-700 bg-gray-50 p-4 rounded-lg">
+                            系统学习了机械制造相关专业知识，掌握了机械设计、数控技术等核心技能，为后续在机械行业的工作奠定了坚实的理论基础。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作经历 -->
+        <section id="experience" class="mb-16 scroll-mt-20">
+            <div class="flex items-center mb-8">
+                <div class="w-10 h-1 bg-primary rounded-full mr-4"></div>
+                <h2 class="text-3xl font-bold text-dark">工作经历</h2>
+            </div>
+            
+            <!-- 工作经历时间线 -->
+            <div class="relative">
+                <!-- 时间线中轴线 -->
+                <div class="absolute left-0 md:left-1/2 h-full w-0.5 bg-gray-200 transform md:translate-x-px"></div>
+                
+                <!-- 安美科技股份有限公司 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center">
+                        <!-- 左侧时间和公司 -->
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-2">
+                                至今
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">安美科技股份有限公司</h3>
+                            <p class="text-gray-600">销售工程师</p>
+                        </div>
+                        
+                        <!-- 时间线节点 -->
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 md:translate-x-0 shadow-md z-10"></div>
+                        
+                        <!-- 右侧工作内容 -->
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>依托机械制造业资源积累，聚焦机床装备制造领域液压油销售，入职首年达成百万级业绩，成功拿下吉尔吉斯斯坦、孟加拉2单出口订单。</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>2025年8月单月完成20万业绩，持续深耕目标领域客户开发与维护。</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 江门市良马润滑油有限公司 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center">
+                        <!-- 左侧时间和公司 -->
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-2">
+                                半年
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">江门市良马润滑油有限公司</h3>
+                            <p class="text-gray-600">销售业务员</p>
+                        </div>
+                        
+                        <!-- 时间线节点 -->
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 md:translate-x-0 shadow-md z-10"></div>
+                        
+                        <!-- 右侧工作内容 -->
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>负责长城、统一、福满星等品牌润滑油及公司自主品牌润滑油、切削液销售，作为润滑油行业新人，入职第二个月即达成10万业绩。</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 江门市蒙德电气股份有限公司 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center">
+                        <!-- 左侧时间和公司 -->
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-2">
+                                约2年
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">江门市蒙德电气股份有限公司</h3>
+                            <p class="text-gray-600">销售工程师（兼售后调试）</p>
+                        </div>
+                        
+                        <!-- 时间线节点 -->
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 md:translate-x-0 shadow-md z-10"></div>
+                        
+                        <!-- 右侧工作内容 -->
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>主导注塑机、油压机的伺服液压系统销售工作，同时承担相关产品售后调试服务，兼顾销售拓展与客户服务，积累机械领域客户资源。</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 广东今科机床有限公司 -->
+                <div class="relative">
+                    <div class="md:flex items-center">
+                        <!-- 左侧时间和公司 -->
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-2">
+                                1年
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">广东今科机床有限公司</h3>
+                            <p class="text-gray-600">车间工程师</p>
+                        </div>
+                        
+                        <!-- 时间线节点 -->
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 md:translate-x-0 shadow-md z-10"></div>
+                        
+                        <!-- 右侧工作内容 -->
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                        <span>负责CNC三轴、四轴、五轴设备的制造与调试工作，扎实掌握机械加工设备核心技术，为后续销售工作奠定专业基础。</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能特长 -->
+        <section id="skills" class="mb-16 scroll-mt-20">
+            <div class="flex items-center mb-8">
+                <div class="w-10 h-1 bg-primary rounded-full mr-4"></div>
+                <h2 class="text-3xl font-bold text-dark">技能特长</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 专业技能 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">专业技能</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">CAD软件操作</span>
+                                <span class="text-gray-500">熟练</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 90%"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">普通液压机械制造</span>
+                                <span class="text-gray-500">独立完成</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 85%"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">CNC三轴车床操作</span>
+                                <span class="text-gray-500">熟练</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 80%"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">机械维护</span>
+                                <span class="text-gray-500">熟练</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 75%"></div>
+                        </div>
+                        
+                        <ul class="mt-4 space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                                <span>曾为广东牛力物流机械科技有限公司提供机械售后支持</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                                <span>曾为广东威麟勤力机械有限公司提供机械售后支持</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 业务能力 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">业务能力</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">机械相关产品销售</span>
+                                <span class="text-gray-500">精通</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 95%"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">润滑油领域销售</span>
+                                <span class="text-gray-500">精通</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 90%"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">液压系统销售</span>
+                                <span class="text-gray-500">熟练</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 85%"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">出口业务拓展</span>
+                                <span class="text-gray-500">熟练</span>
+                            </div>
+                            <div class="progress-bar" style="--progress: 80%"></div>
+                        </div>
+                        
+                        <ul class="mt-4 space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                                <span>具备客户开发、订单促成能力</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                                <span>拥有跨区域（含出口）业务拓展经验</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 个人优势 -->
+        <section id="advantages" class="mb-16 scroll-mt-20">
+            <div class="flex items-center mb-8">
+                <div class="w-10 h-1 bg-primary rounded-full mr-4"></div>
+                <h2 class="text-3xl font-bold text-dark">个人优势</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 行业热情 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-primary/10 p-6">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary mb-4">
+                            <i class="fa fa-heart text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">行业热情</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">热爱润滑油行业，认可其广泛市场应用价值，乐于通过业务接触各类机械并持续学习相关知识。</p>
+                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-primary">
+                            <p class="text-gray-700 italic">"对机械和润滑油行业有浓厚兴趣，始终保持学习心态，不断提升专业知识和业务能力。"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 职业素养 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-primary/10 p-6">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary mb-4">
+                            <i class="fa fa-star text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">职业素养</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">勤奋好学，具备"不解决问题不罢休"的执着精神；心态坚韧，擅长以积极态度应对客户沟通中的挑战。</p>
+                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-primary">
+                            <p class="text-gray-700 mb-2"><span class="font-semibold">成功案例：</span>曾通过持续跟进（1个月内多次沟通，不惧挫折），最终促成客户合作，首月下单16万且保持长期合作。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 期待薪资 -->
+        <section id="salary" class="mb-16 scroll-mt-20">
+            <div class="flex items-center mb-8">
+                <div class="w-10 h-1 bg-primary rounded-full mr-4"></div>
+                <h2 class="text-3xl font-bold text-dark">期待薪资</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                        <i class="fa fa-money text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800">马来西亚工作期待薪资</h3>
+                </div>
+                
+                <div class="space-y-6 pl-16">
+                    <div class="flex items-start">
+                        <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4 flex-shrink-0 mt-1">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 font-medium">前半年包吃包住包医疗</p>
+                            <p class="text-gray-600 mt-1">税后 12000元人民币</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4 flex-shrink-0 mt-1">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 font-medium">包住不包医疗不包吃</p>
+                            <p class="text-gray-600 mt-1">税后 14000-15000元人民币</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">任铭杰</h2>
+                    <p class="text-gray-400">机械制造与销售领域专业人才</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-4 mb-4">
+                        <a href="tel:18029601807" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-phone"></i>
+                        </a>
+                        <a href="mailto:1845770674@qq.com" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">© 2025 个人简历. 保留所有权利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                document.getElementById('mobileMenu').classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 回到顶部按钮
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+            
+            // 导航栏滚动效果
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 100) {
+                nav.classList.add('py-2', 'shadow-lg');
+                nav.classList.remove('py-3', 'shadow-md');
+            } else {
+                nav.classList.add('py-3', 'shadow-md');
+                nav.classList.remove('py-2', 'shadow-lg');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 为卡片添加进入动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+
+        // 添加渐入动画
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fadeIn {
+                    animation: fadeIn 0.6s ease forwards;
+                }
+            </style>
+        `);
+    </script>
+</body>
+</html>
